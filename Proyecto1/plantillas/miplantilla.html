@@ -1,6 +1,13 @@
 <html>
     <body>
         <h1>Soy Alejandro Maggioni y esta es mi primera plantilla.</h1>
+
+        {% if nombre_persona == 'ale' %}
+        <p>El curso lo toma el alumno elegido</p>
+        {% else %}
+        <p>El curso lo toma otro alumno</p>
+        {% endif %}
+
         <h2>El nombre del programador: es {{nombre_persona.title}} {{apellido_persona.title}}</h2>
         <p>Estamos viendo el tema
             de las plantillas a d&iacute;a:
