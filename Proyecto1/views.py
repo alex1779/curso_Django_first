@@ -17,17 +17,19 @@ def saludo(request):    #primera vista
 
     #apellido="Maggioni"
 
-    per1 = Persona("Alitos", "maggioni1")
+    temasDelCurso=["Modelos", "Formularios", "Vistas", "Despliegue"]
+
+    per1 = Persona("ale", "maggioni")
 
     momentoActual = datetime.datetime.now()
 
-    doc_externo=open("/home/rafa/Escritorio/ProyectosDjango/Proyecto1/Proyecto1/plantillas/miplantilla.html")
+    doc_externo=open("/home/rafa/Escritorio/ProyectosDjango/curso_Django_first/Proyecto1/plantillas/miplantilla.html")
 
     plt=Template(doc_externo.read())
 
     doc_externo.close()
 
-    ctx=Context({"nombre_persona":per1.nombre, "apellido_persona":per1.apellido, "momento_actual":momentoActual, "temas":["Modelos", "Formularios", "Vistas", "Despliegue"]})
+    ctx=Context({"nombre_persona":per1.nombre, "apellido_persona":per1.apellido, "momento_actual":momentoActual, "temas":temasDelCurso})
 
     documento=plt.render(ctx)
 
