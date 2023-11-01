@@ -1,29 +1,17 @@
 <html>
 
-<head>
+    <head>
+        <title>
+            {% block title %}{% endblock %}
+        </title>
+    </head>
 
-    <title>
-
-        {% block title %}
-
-        {% endblock %}
-
-    </title>
-
-</head>
-
-<body>
-
-    <h1>Pildoras informaticas</h1>
-
-    <h3>Cursos de programacion, ofimatica y diseno web</h3>
-
-    {% block content %}
-    {% endblock %}
-
-    <p>Cursos gratuitos. Gracias por su visita</p>
-
-</body>
-
+    <body>
+        <h1>Pildoras informaticas</h1>
+        {% include "superior/barra.html" %}
+        <h3>Cursos de programacion, ofimatica y diseno web</h3>
+        {% block content %}{% endblock %}
+        <p>Cursos gratuitos. Gracias por su visita</p>
+    </body>
 
 </html>

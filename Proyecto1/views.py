@@ -45,6 +45,12 @@ def cursoC(request):
 
     return render(request, "cursoC.html", {"dameFecha":fechaActual})
 
+def cursoCss(request):
+
+    fechaActual = datetime.datetime.now()
+
+    return render(request, "cursoC.html", {"dameFecha":fechaActual})
+
 def despedida(request):
 
     return HttpResponse("hasta luego amigos")
